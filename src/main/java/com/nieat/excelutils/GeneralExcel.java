@@ -14,7 +14,7 @@ import java.util.List;
  * @Description: 导出Excel表格
  * @Date: 16:51 2018/8/20
  */
-public class GeneralExcel implements BaseWrite {
+public class GeneralExcel implements WriteInterface {
     private XSSFWorkbook wb;
     private XSSFSheet sheet;
     private Class c;

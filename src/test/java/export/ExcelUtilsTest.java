@@ -1,7 +1,6 @@
 package export;
 
-import com.nieat.excelutils.BaseReader;
-import com.nieat.excelutils.BaseWrite;
+import com.nieat.excelutils.ReaderInterface;
 import com.nieat.excelutils.ExcelType;
 import com.nieat.excelutils.ExcelUtils;
 import com.nieat.vo.ClassVo;
@@ -24,7 +23,7 @@ public class ExcelUtilsTest {
     @Test
     public void Reader() throws IOException {
         InputStream in = new FileInputStream("D:\\tmp\\template2.xlsx");
-        BaseReader reader = ExcelUtils.newReaderExcel(ExcelType.XLSX, ClassVo.class);
+        ReaderInterface reader = ExcelUtils.newReaderExcel(ExcelType.XLSX, ClassVo.class);
         reader.read(in);
         List<Object> l = reader.getData();
         l.forEach((Object o) -> {
@@ -44,7 +43,7 @@ public class ExcelUtilsTest {
             t.add(v);
         }
         FileOutputStream fielOut = new FileOutputStream("D:\\tmp\\Out123.xlsx");
-//        BaseWrite write = ExcelUtils.newGeneraWrite(t, ClassVo.class);
+//        WriteInterface write = ExcelUtils.newGeneraWrite(t, ClassVo.class);
 //        write.write(fielOut);
         ExcelUtils.newGeneraWrite(t, ClassVo.class).write(fielOut);
     }

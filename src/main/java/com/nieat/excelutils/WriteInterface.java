@@ -8,7 +8,7 @@ import java.io.OutputStream;
  * @Description:
  * @Date: 10:28 2018/8/20
  */
-public interface BaseWrite {
+public interface WriteInterface {
     /**
      * 生成Excle文件
      *

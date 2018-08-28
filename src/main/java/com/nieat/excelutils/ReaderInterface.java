@@ -9,7 +9,7 @@ import java.util.List;
  * @Description:
  * @Date: 17:26 2018/8/20
  */
-public interface BaseReader {
+public interface ReaderInterface {
     /**
      * 读取Excel流文件
      *

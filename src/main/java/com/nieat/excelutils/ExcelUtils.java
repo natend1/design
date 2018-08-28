@@ -17,7 +17,7 @@ public class ExcelUtils {
      * @param zClass
      * @return
      */
-    public static BaseReader newReaderExcel(ExcelType type, Class zClass) {
+    public static ReaderInterface newReaderExcel(ExcelType type, Class zClass) {
         if (type == ExcelType.XLS) {
             return new ReaderExcel2003(zClass);
         } else if (type == ExcelType.XLSX) {
@@ -27,7 +27,7 @@ public class ExcelUtils {
         }
     }
 
-    public static BaseReader newReaderExcel(String filename, Class zClass) {
+    public static ReaderInterface newReaderExcel(String filename, Class zClass) {
         if (filename.endsWith(".xls")) {
             return new ReaderExcel2003(zClass);
         } else if (filename.endsWith(".xlsx")) {
@@ -37,8 +37,8 @@ public class ExcelUtils {
         }
     }
 
-    public static BaseWrite newGeneraWrite(List t, Class zClass) {
-        BaseWrite write = new GeneralExcel(zClass, t);
+    public static WriteInterface newGeneraWrite(List t, Class zClass) {
+        WriteInterface write = new GeneralExcel(zClass, t);
         return write;
     }
 }

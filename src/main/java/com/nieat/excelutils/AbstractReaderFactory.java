@@ -9,7 +9,7 @@ import java.util.List;
  * @Description: Excel 读取工厂类
  * @Date: 16:08 2018/8/21
  */
-public abstract class AbstractReaderFactory implements BaseReader {
+public abstract class AbstractReaderFactory implements ReaderInterface {
     /**
      * 读取的数据
      */
